@@ -12,7 +12,7 @@ const allowedOrigins = [
 ];
 
 app.use(express.json());
-app.use(cors({ origin: allowedOrigins }));
+app.use(cors({ origin: allowedOrigins, credentials: false }));
 
 app.get("/api/data", getData);
 
