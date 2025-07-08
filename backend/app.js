@@ -10,8 +10,9 @@ const allowedOrigins = [
   process.env.VERCEL_FRONTEND_URL,
   "*",
 ];
+
 app.use(express.json());
-app.use(cors({ origin: allowedOrigins, credentials: true }));
+app.use(cors({ origin: allowedOrigins }));
 
 app.get("/api/data", getData);
 
