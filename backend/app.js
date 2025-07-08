@@ -9,10 +9,6 @@ const allowedOrigins = ["http://localhost:5173", process.env.VERCEL_FRONTEND];
 app.use(express.json());
 app.use(cors({ origin: allowedOrigins, credentials: true }));
 
-app.get("/", (req, res) => {
-  res.send("Backend is working.....");
-});
-
 app.get("/api/data", getData);
 
 export default app;
